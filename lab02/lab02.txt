@@ -1,0 +1,63 @@
+Andrew Thomas
+CS344
+Lab02
+2.1
+
+    Which of the local search algorithms solves the problem? How well does each algorithm do?
+    Both solve the problem, getting the correct answer of 15. By this measure, both do well.
+
+    Which algorithm works more quickly?
+    Because growth is linear, the hill-climber is a bit faster.
+
+    Does the starting value for x make any difference? Why or why not?
+    Nope, both will always find the maximum.
+
+    What affect does changing the delta step value make on each algorithm? Why?
+    It affects what numbers can be checked for as a neighbor.
+    	Changing it by a whole number means it will find the best answer where
+    	(answer - initial) % delta == 0.
+    
+    What is the purpose of the exp_schedule() method in the simulated annealing function call?
+    It creates a lamba function that will receive each integer and return k * -lam^t for the 	first limit integers.
+
+ 2.2
+
+    How do each of the algorithms do on this problem space? Why?
+    The SA solution appears to do a bit better, it it is almost random which ones comes up
+    	with a better answer.
+
+    Does the starting value make any difference here?
+    The starting value becomes very important for the hill climb because it can only go up. 	However it doesn't seem to make as much difference for the SA solution.
+
+    Does modifying the step size (i.e., delta) affect the operation of the two algorithms? Why or why not?
+    	Yes, lowering the delta makes the two results more precise, but less accurate.
+    	Making the step size greater than 1 makes them shoot up because each cycle is higher than their current point.
+
+    What are the maximum and minimum possible values here, and how do the two algorithms score with respect to them?
+    	In theory it should be 0 and 30, though the problem solvers seem to ignore them.
+
+2.3
+	
+    How does each algorithm do with these restarts? Why?
+    They both do better because they have multiple attempts to find an optimal answer.
+    	When so much of accuracy has to do with starting position, this make it much better.
+
+    What are the average values of the runs for each of the algorithms?
+    A couple of runs of test data shows the HC at about 24 and the SA at 30.
+    	Note that SA would frequently go above maximum.
+
+    If one of the algorithms does better, explain why; if not, explain why not.
+    	The SA does quite well here. It has enough of an advantage that over 3 runs,
+    		it almost always finds the better solution.
+
+2.4
+	For which algorithm does beam search make the most sense?
+	This would make most sense on the HC because the random nature of the SA may cause
+		good paths to be pruned prematurely.
+
+	How many solutions could you maintain with reasonable space and time constraints?
+	For a problem of this size, I imagine you could store quite a lot. 
+
+	How would you modify the code to implement beam search? How is it different from random restarts, if at all? 
+	You would have to do some parallel programming. From there you could set up a while loop
+		that runs until there is one thread remaining. Each second you could prune one thread. It is different from random restarts because it compares each run as it searches.
