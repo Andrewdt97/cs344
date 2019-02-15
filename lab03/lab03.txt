@@ -1,0 +1,41 @@
+Andrew Thomas
+CS344
+Lab03
+
+3.1
+a.
+Easy:
+	DFS: Is really bad. Not able to solve in timely manner.
+	AC3: Brilliant. Very fast.
+	Backtracing: It gets it, but it takes a few seconds.
+	Min conflicts: Also not able to solve in timely manner. Ended up failing.
+
+Medium:
+	DFS: Still not solved.
+	AC3: It fails quite quickly. :(
+	Backtracing: Not able to solve in timely manner.
+	Min conflicts: Fails after a while.
+
+Hard:
+	DFS: An utter failure of a solution search for this problem.
+	AC3: Fails quite quickly.
+	Backtracing: Still not completing anything.
+	Min conflicts: Still too slow.
+
+b. select_unassigned_variable doesn't seem to do a whole lot, but forward_checking inference makes all problems solvable quite quickly!
+
+3.2
+a. DFS and AC3 fail for all. Vanilla backtracking goes up until about 25, but with mrv and forward checking can go well past 100. Min-conflicts can handle thousands of queens.
+b. MRV and forward_checking
+c. It usually requires a handful of steps.
+
+3.3
+a.
+States: Problem seems to store the state as a single object with mappings while CSP specifically maps variables to the domain.
+Domains: Problem I think implements the domain within contraints while CSP has it predefined.
+Actions: Problem has them predefined while CSP is the mapping of variables onto the domain.
+Results: Problem again would check the constraints for valid states while CSP would simply have assigned a domain to a variable.
+Goal states: Both store a goal state in similar ways to check the accuracy of the state.
+
+b.
+In both, they are evaluating the "correctness of a state". However, Problem's hueristic is much more open ended while CSP can look at the node's neighbors to help better evaluate.
