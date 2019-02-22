@@ -1,0 +1,31 @@
+Andrew Thomas
+CS 344 Lab04
+
+4.3a
+P(User) = 0.089
+P(-User) = 1 - 0.089 = 0.911
+P(-User) = 0.911
+P(test | user) = 0.99
+P(-test | user) = 0.01
+P(test | -user) = 0.02
+P(User | test) = P( user ^ test) / P(test)
+	.99 * .089
+	___________
+
+(.99 * .089) + (.02 * .911)
+
+		=
+
+	  0.829
+
+P(-User | test) = 1 - 0.829 = 0.171
+
+b.
+P(cancer) = 0.01
+P(test | cancer) = 0.8
+P(test | -cancer) = 0.096
+P(test) = P(test | cancer) * P(cancer) + P(test | -cancer) * (1 - P(cancer))
+	P(test) = (0.8 * 0.01) + (0.096 * 0.99) = .103
+P(cancer | test) = ???
+P(cancer | test) = (P(test | cancer) * P(cancer)) / P(test)
+	= (0.8 * 0.01) / 0.103 = 0.077
