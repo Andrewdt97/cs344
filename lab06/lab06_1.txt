@@ -1,0 +1,32 @@
+Andrew Thomas (no partner)
+CS 344 Lab 06
+
+1. I want a ML tool that chooses lighting colors for Sunday worship based on an analysis of the emotions displayed in the congregation's social media feeds throughout the week.
+
+2. I want the congregation to feel more engaged with because there is less conflict between the emotional leading of different colors and their respective moods.
+
+3a. Success metric gets a little more foggy, but an increased buy-in to the service with more personal engagement.
+
+3b. Key results might include: references to the service on social media, attendance rate, no spotted sleepers.
+
+3c. It is deemed a failure if attendance goes down, or there are complaints about lighting, or the colors chosen just appear unnatural.
+
+4a. The ouput of the data will be a color (or color scheme) that the computer reccomends for this service.
+
+4b. A color or schema from the spectrum
+
+5a. Data will be colelcted through the week and be processed on Saturday.
+
+5b. Selecting light colors.
+
+6. Perhaps we could use a complex hueristic around a generalized emotional analysis, but it may be difficult to factor in other variables like the song selection.
+
+7a. I believe it is a  multi-class single-label classification problem which predicts a reccomended color based on handfuls of input data.
+
+7b. Given emotional data, song list, sermon themes, give a color output that allows for more congregant engagement.
+
+8. Inputs: Emotional data, song list, sermon themes Output: Light color
+
+9. This data comes from social media feeds and the input of the church leadership.
+
+10. I think all of these are reaonable inputs.

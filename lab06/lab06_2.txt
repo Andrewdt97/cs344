@@ -1,0 +1,15 @@
+Andrew Thomas
+CS344 lab06
+
+Entropy(Hungry?) = - (7/12 * lg(7/12)) + (5/12 * lg(5/12))
+	= - (-0.4536 - 0.5263)
+	= 0.9799
+Remainder(Hungry?)
+	= 7/12 * Entropy(5/7, 2/7)
+	= 7/12 * (- (5/7 * lg(5/7) + 2/7 * lg(2/7)))
+	= 7/12 * (- (-0.8631)
+	= 0.5035
+
+Gain(Hungry?) = 0.9799 - 0.5035 = 0.4764
+
+This would make it a better indicator of WillWait than both patrons and type.
