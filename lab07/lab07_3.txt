@@ -1,0 +1,33 @@
+Andrew Thomas
+CS 344 Lab07
+
+a.
+california_housing_dataframe["rooms_per_person"] = california_housing_dataframe["population"] / california_housing_dataframe["total_rooms"]
+
+calibration_data = train_model(
+    learning_rate=0.05,
+    steps=500,
+    batch_size=5,
+    input_feature="rooms_per_person"
+)
+
+# This code is shamelessly copied from the suggested solution
+plt.figure(figsize=(15, 6))
+plt.subplot(1, 2, 1)
+plt.scatter(calibration_data["predictions"], calibration_data["targets"])
+
+
+california_housing_dataframe["rooms_per_person_clip"] = california_housing_dataframe["rooms_per_person"].apply(lambda x: max(x, 600))
+
+calibration_data = train_model(
+    learning_rate=0.0005,
+    steps=500,
+    batch_size=5,
+    input_feature="rooms_per_person_clip"
+)
+
+b. What is the purpose of introducing synthetic features?
+Synthetic features may give more accurate insights because of the way data relates to other data.
+
+What are outliers and what is typically done with them?
+Outliers are data points way outside of the standard for the set. They are oftened weeded out by a lamba function applied to the set.

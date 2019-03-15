@@ -1,0 +1,29 @@
+Andrew Thomas
+CS 344 Lab07
+
+Compare and contrast categorical vs numerical data
+Categorical data is data that fits into lables such as the make of a car. Numerical data is a number, so like the price of a vehicle.
+
+Submit solutions to tasks 1–2. Include your best hyper-parameter values and the resulting RMSE, but not the training output.
+train_model(
+    learning_rate=0.0001,
+    steps=150,
+    batch_size=2
+)
+
+Final RMSE (on training data): 168.84
+
+train_model(
+    learning_rate=0.0001,
+    steps=250,
+    batch_size=2,
+    input_feature='population'
+)
+Final RMSE (on training data): 175.95
+
+What are the hyper-parameters learned in these exercises and is there a “standard” tuning algorithm for them?
+Learning rate: The rate at which the prediction line is updated
+Steps: The total number of steps of readjustment
+Batch size: The size of the batches passed to the model
+
+There is no standard tuning for them. They are highly dependant on the data passed in to them.

@@ -1,0 +1,14 @@
+Andrew Thomas
+CS 344 Lab07
+
+saint_cities = cities['City name'].apply(lambda name: 'San' in name)
+big_cities = cities['Area square miles'].apply(lambda sqm: sqm > 50)
+cities['Is big saint'] = saint_cities & big_cities
+cities
+
+cities.reindex(['Jim', 'Bob', 'Johnson'])
+
+Why would one use Pandas rather than the standard data manipulation features provided by NumPy?
+Pandas gives easy access to data in a table format with easy access and manipulation over all of the data.
+Under what circumstances would it be useful to reorder/shuffle a Pandas DataFrame?
+If you have large amounts of data, a good sort can save time accessing based on the index. Also being able to view your data is different orders can be helpful to see trends.
