@@ -1,0 +1,18 @@
+Andrew Thomas
+CS 344 Lab08
+03/29/19
+
+Compare and contrast Seaborn vs. MatPlotLib.
+Both libraries enable data visualization, but while MPL seems to give highly customizable  and basic graphic, seaborn has lots of support for complex data analysis.
+
+How big is this dataset and does it seem of an appropriate size for this problem?
+We have a data set with 397 entries. I think it will do the job for a simple cause-effect prediction like this one, but for anything more complex, it might struggle. 
+
+Explain what the prescribed normalization of the data does.
+Normalizing data helps the model use data measured on different scales more effectively.
+
+Is this an example of a linear regression model?
+Yes. We use a linear activation function across our input data.
+
+In their conclusion, they claim that smaller datasets “prefer” smaller networks. Do you agree? Explain your answer.
+I would agree. While a bigger network can give more exact predictions, they are prone to just memorizing inputs. This results in overfitting, which we don't want. In other words, we want a system that is smart, but not one that is too smart.
