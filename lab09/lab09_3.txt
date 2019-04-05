@@ -1,0 +1,30 @@
+Andrew Thomas
+
+Exercise 1:
+
+What’s the size of the cats/dogs datasets?
+	3000 images, 1500 for each species
+
+How does the first convnet compare with the one we did in class.
+	This album goes through more convuluting than our in class example, though that probably is because we are working with much larger images.
+
+Can you see any interesting patterns in the intermediate representations?
+	It's actualy the cat that seems to be filtered out, but I assume the model can then look at what is ommitted to find what it's looking for.
+
+Exercise 2:
+
+What is data augmentation?
+	Manipulating data to multiply the number of units to test against. Running transformations on images is a good example.
+
+Report your best results and the hyperparameters you used to get them.
+
+loss: 0.4800
+	history = model.fit_generator(
+      train_generator,
+      steps_per_epoch=100,
+      epochs=30,
+      validation_data=validation_generator,
+      validation_steps=50,
+      verbose=2)
+      
+A couple of rounds of tweaking parameters did not gain better results at the final epoch, though I did get down to 0.43 during one epoch.
