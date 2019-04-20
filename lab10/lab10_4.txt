@@ -1,0 +1,16 @@
+Andrew Thonas
+CS 344 Lab10
+April 20, 2019
+
+1. Sometimes simple solutions are better than complex ones. With sentiment analysis, sometimes the presence of certain buzzwords are more telling that whatever a DNN can pick up.
+
+2. In this case, the NN does a good portion better than the linear model 84% to 78%.
+
+3. Embedding makes a lot of sense for language processing problems, but the default embedding configuration makes our model less accurate.
+
+4. "Excellent" and "amazing" has very similair embeddings which makes a lot of sense becayse they are both strong, positive adjectives.
+
+5. Expanding the hidden layer to [200, 75] and the steps on the classifier.train() to 10000 obtains the following results on the test set:
+	Recall = 0.84
+	Precision: 0.99
+	Accuracy:  0.86
