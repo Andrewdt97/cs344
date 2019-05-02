@@ -1,0 +1,23 @@
+Andrew Thomas
+CS 344 Lab10
+4/15/19
+
+Would you rather use TensorFlow or Keras to build your models?
+I feel like I have a hard time answering this question. Our examples using Keras thus far have far less code than do our TF examples. I like this ease of use, but I have no idea how much of that is down the Keras's preformatted data. On a custom dataset, it might be just as much work to get it running.
+
+Tasks 1 & 2: Report your best hyper-parameter settings and their resulting performance on the testing dataset.
+
+Task 1: The following modified solution code got a RMSE on the validation set of 100.7
+
+dnn_regressor = train_nn_regression_model(
+    learning_rate=0.001,
+    steps=2000,
+    batch_size=100,
+    hidden_units=[32, 10],
+    training_examples=training_examples,
+    training_targets=training_targets,
+    validation_examples=validation_examples,
+    validation_targets=validation_targets)
+
+Task 2:
+The model generated from above has a RMSE of 100.61

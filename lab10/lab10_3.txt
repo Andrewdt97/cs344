@@ -1,0 +1,9 @@
+Andrew Thoams
+CS 344 Lab10
+April 20, 2019
+
+1. The confusion matrix shows how likely one number is to get reported as a different number.
+
+2. We are using a lot more nodes in the hidden layer. And it looks like we are using a softmax-esque output, but I am not sure how the activation function for the hidden layer operates.
+
+3. Running 1000 steps looks like some sorts of patterns are discovered. 10 steps looks like total chaos.

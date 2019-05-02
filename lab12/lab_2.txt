@@ -1,0 +1,32 @@
+Andrew Thomas
+CS 344 Lab 12
+This is a text file instead of a .pl because no prolog programming was actually required.
+
+
+From LPN!
+    Exercise 2.1, questions 1, 2, 8, 9, 14 - Give the necessary instantiations.
+    1. Yes, they are the same thing
+    2. No, strings can be matched to a non-string atom, but the match is case sensitive. 
+    8. As long as X equals bread.
+    9. As long as X is sausage and Y is bread.
+    14. No way to make this one work
+    
+    Exercise 2.2 - Explain how Prolog does its unification and reasoning. If you have issues getting the results you’d expect, are there things you can do to game the system?
+    Prolog unifies terms that are the same or have variables that can be instantiated to make them the same. The resoning for unification is copy and pasted as follows:
+
+
+    If term1 and term2 are constants, then term1 and term2 unify if and only if they are the same atom, or the same number.
+    If term1 is a variable and term2 is any type of term, then term1 and term2 unify, and term1 is instantiated to term2 . Similarly, if term2 is a variable and term1 is any type of term, then term1 and term2 unify, and term2 is instantiated to term1 . (So if they are both variables, they’re both instantiated to each other, and we say that they share values.)
+    If term1 and term2 are complex terms, then they unify if and only if:
+        They have the same functor and arity, and
+        all their corresponding arguments unify, and
+        the variable instantiations are compatible. (For example, it is not possible to instantiate variable X to mia when unifying one pair of arguments, and to instantiate X to vincent when unifying another pair of arguments .)
+    Two terms unify if and only if it follows from the previous three clauses that they unify.
+
+Does inference in propositional logic use unification? Why or why not? 
+Yes it does! Prolog uses unification trees of sorts to match
+equality when making inferences.
+
+Does Prolog inferencing use resolution? Why or why not?
+Prolog uses inferences to find variables that make statements
+true. It effectively "tests out" values and works down their trees.
